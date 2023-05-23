@@ -6,6 +6,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -58,6 +59,13 @@ public class ScanWifiActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // TODO : DB에 RP, WiFi Data 업로드
+                
+                // 이후 ResultActivity로 이동
+                Intent intent = new Intent(ScanWifiActivity.this, ResultActivity.class);
+
+                intent.putExtra("reference_point", textView_RP.getText().toString());
+                startActivity(intent);
+                finish();   // To prevent duplicate inputs to the DB
             }
         });
 
@@ -66,6 +74,9 @@ public class ScanWifiActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // main activity로 돌아가기
+                Intent intent = new Intent(ScanWifiActivity.this, HomeActivity.class);
+                startActivity(intent);
+                finish();   // To prevent duplicate inputs to the DB
             }
         });
 
