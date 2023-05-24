@@ -1,3 +1,5 @@
+//Getting Wifi RSSI Values continuously Android Application Doesn't start
+//출처 : https://stackoverflow.com/questions/41583416/getting-wifi-rssi-values-continuously-android-application-doesnt-start
 package com.gachon.adminapp;
 
 import androidx.appcompat.app.AppCompatActivity;
