@@ -77,10 +77,13 @@ public class SelectLocationActivity extends AppCompatActivity {
         button_ScanWifi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+<<<<<<< HEAD
 
                 //spinner 값 저장 후 WifiDTO에서 사용
                 Floor = spinner_Floor.getSelectedItem().toString();
                 RP=spinner_RP.getSelectedItem().toString();
+=======
+>>>>>>> origin/function
                 Intent intent = new Intent(SelectLocationActivity.this, ScanWifiActivity.class);
 
                 intent.putExtra("reference_point", textView_RP.getText().toString());
@@ -90,9 +93,12 @@ public class SelectLocationActivity extends AppCompatActivity {
 
     }
 
+<<<<<<< HEAD
     public static String Floor;
     public static String RP;
 
+=======
+>>>>>>> origin/function
     // declaration
     private Spinner spinner_Floor;
     private Spinner spinner_RP;

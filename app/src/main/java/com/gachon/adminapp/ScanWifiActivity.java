@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 //Getting Wifi RSSI Values continuously Android Application Doesn't start
 //출처 : https://stackoverflow.com/questions/41583416/getting-wifi-rssi-values-continuously-android-application-doesnt-start
+=======
+>>>>>>> origin/function
 package com.gachon.adminapp;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,8 +25,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import com.google.gson.Gson;
 
+=======
+>>>>>>> origin/function
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -62,9 +68,12 @@ public class ScanWifiActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // TODO : DB에 RP, WiFi Data 업로드
+<<<<<<< HEAD
                 // Send the JSON data to the Spring server
                 SenderToServer sender = new SenderToServer(arrayList);
                 sender.send();
+=======
+>>>>>>> origin/function
             }
         });
 
@@ -73,8 +82,11 @@ public class ScanWifiActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // main activity로 돌아가기
+<<<<<<< HEAD
                 //finish를 통해 activity 종료하여 돌아감
                 finish();
+=======
+>>>>>>> origin/function
             }
         });
 
@@ -125,7 +137,11 @@ public class ScanWifiActivity extends AppCompatActivity {
             int count = 0; // Variable to keep track of the number of items added
             for (ScanResult res : scanResults) {
                 if (count < 5) { // Add only the top 5 values
+<<<<<<< HEAD
                     WifiDTO temp = new WifiDTO(res.SSID, res.BSSID, String.valueOf(res.level));
+=======
+                    WifiDTO temp = new WifiDTO(res.SSID, res.BSSID, res.level);
+>>>>>>> origin/function
                     arrayList.add(temp);
                     count++;
                 } else {
@@ -137,15 +153,25 @@ public class ScanWifiActivity extends AppCompatActivity {
     };
 
     // declaration
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/function
     private TextView textView_RP;
     private RecyclerView recyclerView;
     private Button button_StoreInDB;
     private Button button_BackToMain;
+<<<<<<< HEAD
     private ArrayList<WifiDTO> arrayList = new ArrayList<>();
     private WifiManager wifiManager;
     private List<ScanResult> scanResults;
+=======
+
+    private WifiManager wifiManager;
+    private List<ScanResult> scanResults;
+    private ArrayList<WifiDTO> arrayList = new ArrayList<>();
+>>>>>>> origin/function
     private RecyclerAdapter adapter;
     private int REQUEST_PERMISSION_CODE = 1;
     private String[] permissions = {
@@ -154,4 +180,8 @@ public class ScanWifiActivity extends AppCompatActivity {
             android.Manifest.permission.ACCESS_WIFI_STATE,
             android.Manifest.permission.CHANGE_WIFI_STATE };
     private boolean start;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/function
