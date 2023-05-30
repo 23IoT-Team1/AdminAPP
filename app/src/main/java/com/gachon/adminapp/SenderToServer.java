@@ -64,6 +64,7 @@ public class SenderToServer {
         {
                 String rp = "";
 
+                // TODO: rp랑 place 정보 넣기. place 정보는 string.xml이랑 맞추기
                 if (floor == "4F") {
                         switch(place) {
                                 case "4층 아르테크네":

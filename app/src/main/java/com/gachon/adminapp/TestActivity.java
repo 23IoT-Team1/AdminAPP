@@ -22,7 +22,7 @@ public class TestActivity extends AppCompatActivity {
         button_Test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // wifi scan 후 현위치 결과 뱉기
+                // TODO: wifi scan 후 현위치 결과 뱉기
 
                 // 이후 RP textView 바꾸기
                 String RP = "~~";    // ex
