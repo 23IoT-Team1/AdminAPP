@@ -35,15 +35,16 @@ public class ScanWifiActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan_wifi);
 
-        textView_RP = findViewById(R.id.textView_RP);
+        textView_Place = findViewById(R.id.textView_Place);
         recyclerView = findViewById(R.id.recycler1);
         button_StoreInDB = findViewById(R.id.button_StoreInDB);
         button_BackToMain = findViewById(R.id.button_BackToMain);
 
         // Get Intent (reference point)
         Intent intent = getIntent();
-        String rp = intent.getStringExtra("reference_point");
-        textView_RP.setText(rp);
+        String floor = intent.getStringExtra("current_place");
+        String place = intent.getStringExtra("current_place");
+        textView_Place.setText(place);
 
         // Get Wi-Fi data
         wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
@@ -60,15 +61,16 @@ public class ScanWifiActivity extends AppCompatActivity {
         button_StoreInDB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // TODO : DB에 RP, WiFi Data 업로드
+                // DB에 WiFi Data 업로드
+
                 // Send the JSON data to the Spring server
-                SenderToServer sender = new SenderToServer(arrayList);
+                SenderToServer sender = new SenderToServer(floor, place, arrayList);
                 sender.send();
 
                 // 이후 ResultActivity로 이동
                 Intent intent = new Intent(ScanWifiActivity.this, ResultActivity.class);
 
-                intent.putExtra("reference_point", textView_RP.getText().toString());
+                intent.putExtra("current_place", textView_Place.getText().toString());
                 startActivity(intent);
                 finish();   // To prevent duplicate inputs to the DB
             }
@@ -145,7 +147,7 @@ public class ScanWifiActivity extends AppCompatActivity {
     };
 
     // declaration
-    private TextView textView_RP;
+    private TextView textView_Place;
     private RecyclerView recyclerView;
     private Button button_StoreInDB;
     private Button button_BackToMain;

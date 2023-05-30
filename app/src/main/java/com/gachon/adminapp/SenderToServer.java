@@ -17,11 +17,10 @@ public class SenderToServer {
 
 
         private static ArrayList<node> nodeList;
-        public SenderToServer(ArrayList arrayList){
-                //selectLocationActivity에서 spinner에서 고른 값을 저장 후 가져옴
-                String floor = SelectLocationActivity.Floor;
-                String rp = SelectLocationActivity.RP;
-                String place = "임시 이름";
+        public SenderToServer(String floor, String place, ArrayList arrayList){
+                
+                // rp는 아래 함수에 매칭 후 넣기
+                String rp = setRP(floor, place);
                 
                 //빈 arraylist에 집어넣어줌
                 //constructor에서 받아온 arraylist는
@@ -59,6 +58,38 @@ public class SenderToServer {
 
                 */
         }
+
+        // place를 받으면 그에 맞는 rp 이름을 반환
+        private String setRP(String floor, String place)
+        {
+                String rp = "";
+
+                if (floor == "4F") {
+                        switch(place) {
+                                case "4층 아르테크네":
+                                        rp = "4-1";
+                                        break;
+                                case "401호 앞":
+                                        rp = "4-2";
+                                        break;
+                        }
+
+                }
+                else if (floor == "5F") {
+                        switch(place) {
+                                case "5층 아르테크네":
+                                        rp = "5-1";
+                                        break;
+                                case "501호 앞":
+                                        rp = "5-2";
+                                        break;
+                        }
+                }
+
+
+                return rp;
+        }
+
 
 }
 

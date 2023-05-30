@@ -6,30 +6,65 @@
         <item>5F</item>
     </string-array>
 
-    <string-array name="reference_points_4F">
-        <item>4F #401</item>
-        <item>4F #402</item>
-        <item>4F #403</item>
-        <item>4F #404</item>
-        <item>4F #405</item>
-        <item>4F #406</item>
-        <item>4F #407</item>
-        <item>4F #408</item>
-        <item>4F #409</item>
-        <item>4F #410</item>
+    <string-array name="place_4F">
+        <item>4층 아르테크네</item>
+        <item>401호 앞</item>
+        <item>402호 앞</item>
+        <item>403호 앞</item>
+        <item>404호 앞</item>
+        <item>405호 앞</item>
+        <item>406호 앞</item>
+        <item>407호 앞</item>
+        <item>408호 앞</item>
+        <item>409호 앞</item>
+        <item>410호 앞</item>
+        <item>411호 앞</item>
+        <item>412호 앞</item>
+        <item>413호 앞</item>
+        <item>414호 앞</item>
+        <item>415호 앞</item>
+        <item>416호 앞</item>
+        <item>417호 앞</item>
+        <item>418호 앞</item>
+        <item>419호 앞</item>
+        <item>420호 앞</item>
+        <item>4층 테라스</item>
+        <item>운동장 방향 엘레베이터 앞</item>
+        <item>중간 엘레베이터 앞</item>
+        <item>복정 방향 엘레베이터 앞</item>
+        <item>사물함 앞 복도</item>
+        <item>엘레베이터 옆 복도</item>
     </string-array>
 
-    <string-array name="reference_points_5F">
-        <item>5F #501</item>
-        <item>5F #502</item>
-        <item>5F #503</item>
-        <item>5F #504</item>
-        <item>5F #505</item>
-        <item>5F #506</item>
-        <item>5F #507</item>
-        <item>5F #508</item>
-        <item>5F #509</item>
-        <item>5F #510</item>
+    <string-array name="place_5F">
+        <item>5층 아르테크네</item>
+        <item>501호 앞</item>
+        <item>502호 앞</item>
+        <item>503호 앞</item>
+        <item>504호 앞</item>
+        <item>505호 앞</item>
+        <item>506호 앞</item>
+        <item>507호 앞</item>
+        <item>508호 앞</item>
+        <item>509호 앞</item>
+        <item>510호 앞</item>
+        <item>511호 앞</item>
+        <item>512호 앞</item>
+        <item>513호 앞</item>
+        <item>514호 앞</item>
+        <item>515호 앞</item>
+        <item>516호 앞</item>
+        <item>517호 앞</item>
+        <item>518호 앞</item>
+        <item>519호 앞</item>
+        <item>520호 앞</item>
+        <item>5층 테라스</item>
+        <item>운동장 방향 엘레베이터 앞</item>
+        <item>중간 엘레베이터 앞</item>
+        <item>복정 방향 엘레베이터 앞</item>
+        <item>사물함 앞 복도</item>
+        <item>엘레베이터 옆 복도</item>
+        <item>G-Cube</item>
     </string-array>
 
 </resources>
