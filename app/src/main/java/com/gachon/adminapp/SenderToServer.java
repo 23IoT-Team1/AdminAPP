@@ -27,7 +27,7 @@ public class SenderToServer {
 
 
 
-        private static ArrayList<node> nodeList;
+        private static node request_body;
         public SenderToServer(String floor, String place, ArrayList arrayList){
                 
                 // rp는 아래 함수에 매칭 후 넣기
@@ -36,14 +36,13 @@ public class SenderToServer {
                 //빈 arraylist에 집어넣어줌
                 //constructor에서 받아온 arraylist는
                 // scanWifiActivity에서 저장한 5개의 AP 정보를 WifiDTO 형식으로 담은 Arraylist이다
-                nodeList = new ArrayList<>();
-                nodeList.add(new node(floor, rp, place, arrayList));
+                request_body = new node(floor, rp, place, arrayList);
 
         }
         public static void send() {
 
                 Gson gson = new Gson();
-                String json = gson.toJson(nodeList);
+                String json = gson.toJson(request_body);
 
                 Log.d(TAG, json);
 
@@ -53,7 +52,7 @@ public class SenderToServer {
                 Log.e("테스트","testsets");
 
                 Request request = new Request.Builder()
-                        .url("http://localhost:8080/rp")
+                        .url("http://172.16.63.238:8080/rp")
                         .post(RequestBody.create(MediaType.parse("application/json"), json))
                         .build();
 

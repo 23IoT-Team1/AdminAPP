@@ -4,13 +4,13 @@ public class WifiDTO {
 
     private String ssid;
     private String bssid;
-    private String rssi;
+    private String rss;
 
-    public WifiDTO(String ssid, String bssid, String rssi) {
+    public WifiDTO(String ssid, String bssid, String rss) {
 
         this.ssid = ssid;
         this.bssid = bssid;
-        this.rssi = rssi;
+        this.rss = rss;
     }
 
     public String getSSID() {
@@ -22,7 +22,7 @@ public class WifiDTO {
     }
 
     public String getRSSI() {
-        return rssi;
+        return rss;
     }
 
 }
