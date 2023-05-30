@@ -9,7 +9,6 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -23,11 +22,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.gachon.adminapp.RecyclerAdapter;
-import com.gachon.adminapp.SenderToServer;
-import com.gachon.adminapp.WifiDTO;
-import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.Collections;
