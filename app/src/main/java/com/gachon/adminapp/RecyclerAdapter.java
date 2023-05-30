@@ -36,31 +36,21 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     // 아이템 뷰를 위한 뷰홀더 객체를 생성하고 리턴.
     @Override
-<<<<<<< HEAD
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-=======
-    public RecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
->>>>>>> origin/function
         Context context = parent.getContext();
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View view = inflater.inflate(R.layout.recyclerview_item, parent, false);
-<<<<<<< HEAD
         ViewHolder vh = new ViewHolder(view);
-=======
-        RecyclerAdapter.ViewHolder vh = new RecyclerAdapter.ViewHolder(view);
->>>>>>> origin/function
+
 
         return vh;
     }
 
     // position에 해당하는 데이터를 ViewHolder의 아이템뷰에 표시
     @Override
-<<<<<<< HEAD
     public void onBindViewHolder(ViewHolder holder, int position) {
-=======
-    public void onBindViewHolder(RecyclerAdapter.ViewHolder holder, int position) {
->>>>>>> origin/function
+
         WifiDTO text = mData.get(position);
         holder.txtView_num.setText(String.valueOf(position+1));
         holder.txtView_ssid.setText(text.getSSID());
