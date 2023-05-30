@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ScanWifiActivity">
+    tools:context=".TestActivity"
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/toolbar_background"
         android:minHeight="?attr/actionBarSize"
-        app:title="Collect Data"
+        app:title="Test current location recognition"
         />
 
     <LinearLayout
@@ -22,33 +22,33 @@
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="500dp"
+            android:src="@drawable/floor4" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="32dp"
-            android:paddingBottom="24dp">
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Current Location : " />
+                android:text="Current Location : "
+                />
 
             <TextView
                 android:id="@+id/textView_RP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/ubuntu_medium"
-                android:text="4F #401" />
+                android:text="~~"
+                android:fontFamily="@font/ubuntu_medium" />
         </LinearLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler1"
-            android:scrollbars="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </androidx.recyclerview.widget.RecyclerView>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,10 +58,10 @@
             android:paddingTop="24dp">
 
             <Button
-                android:id="@+id/button_StoreInDB"
+                android:id="@+id/button_Test"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:text="Store in DataBase"
+                android:text="Test recognition"
                 android:background="@drawable/button_background"
                 android:elevation="8dp"
                 android:layout_marginRight="10dp" />
@@ -75,6 +75,6 @@
                 android:elevation="8dp" />
         </LinearLayout>
 
-
     </LinearLayout>
+
 </LinearLayout>
