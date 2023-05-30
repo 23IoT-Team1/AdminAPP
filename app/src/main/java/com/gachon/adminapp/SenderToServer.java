@@ -6,9 +6,20 @@ import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
 import android.util.Log;
 
+import androidx.annotation.NonNull;
+
 import com.google.gson.Gson;
 
+import java.io.IOException;
 import java.util.ArrayList;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 public class SenderToServer {
 
@@ -36,11 +47,13 @@ public class SenderToServer {
 
                 Log.d(TAG, json);
 
-                /*
+
                 OkHttpClient client = new OkHttpClient();
 
+                System.out.println("testset");
+
                 Request request = new Request.Builder()
-                        .url("http://localhost:8080/save")
+                        .url("http://localhost:8080/rp")
                         .post(RequestBody.create(MediaType.parse("application/json"), json))
                         .build();
 
@@ -56,7 +69,7 @@ public class SenderToServer {
                         }
                 });
 
-                */
+
         }
 
         // place를 받으면 그에 맞는 rp 이름을 반환
