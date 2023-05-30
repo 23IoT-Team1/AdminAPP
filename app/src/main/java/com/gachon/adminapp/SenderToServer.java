@@ -50,7 +50,7 @@ public class SenderToServer {
 
                 OkHttpClient client = new OkHttpClient();
 
-                System.out.println("testset");
+                Log.e("테스트","testsets");
 
                 Request request = new Request.Builder()
                         .url("http://localhost:8080/rp")
