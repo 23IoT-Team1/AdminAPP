@@ -133,9 +133,14 @@ public class ScanWifiActivity extends AppCompatActivity {
 
             int count = 0; // Variable to keep track of the number of items added
             for (ScanResult res : scanResults) {
+                
+                //아래 if문으로 전체 wifi와 GC_free_WiFi 구분 가능 
+                //-----------------------------
+                if(!res.SSID.equals("GC_free_WiFi"))
+                    continue;
+                //------------------------------
                 if (count < 5) { // Add only the top 5 values
                     WifiDTO temp = new WifiDTO(res.SSID, res.BSSID, String.valueOf(res.level));
-//                    WifiDTO temp = new WifiDTO(res.SSID, res.BSSID, res.level);
                     arrayList.add(temp);
                     count++;
                 } else {
