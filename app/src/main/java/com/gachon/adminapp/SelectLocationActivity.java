@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -63,6 +64,9 @@ public class SelectLocationActivity extends AppCompatActivity {
                 // 선택한 string 값 받아오기
                 textView_Place.setText(spinner_Place.getSelectedItem().toString());
                 // 나중엔 imageView도 변하게 하기
+                String[] str = spinner_Place.getSelectedItem().toString().split(" ~ ");
+                Log.d("place",str[0]);
+                Log.d("rp",str[1]);
             }
 
             @Override

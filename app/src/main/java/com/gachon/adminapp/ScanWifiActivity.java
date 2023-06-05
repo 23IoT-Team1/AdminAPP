@@ -42,7 +42,7 @@ public class ScanWifiActivity extends AppCompatActivity {
 
         // Get Intent (reference point)
         Intent intent = getIntent();
-        String floor = intent.getStringExtra("current_place");
+        String floor = intent.getStringExtra("current_floor");
         String place = intent.getStringExtra("current_place");
         textView_Place.setText(place);
 
