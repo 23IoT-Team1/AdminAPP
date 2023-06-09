@@ -20,97 +20,115 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingLeft="24dp"
-        android:paddingRight="24dp">
+        android:paddingRight="24dp"
+        android:weightSum="4">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginTop="36dp">
-
-            <RadioGroup
-                android:id="@+id/radioGroup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:background="@drawable/radiogroup_background">
-
-                <RadioButton
-                    android:id="@+id/radioButton_5F"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/selector_radio_button"
-                    android:button="@null"
-                    android:text="5F"
-                    android:textColor="@drawable/selector_radio_text" />
-
-                <RadioButton
-                    android:id="@+id/radioButton_4F"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/selector_radio_button"
-                    android:button="@null"
-                    android:text="4F"
-                    android:textColor="@drawable/selector_radio_text" />
-
-            </RadioGroup>
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="360dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginRight="30dp"
-                android:src="@drawable/floor4" />
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="0.4" >
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="30dp"
-            android:paddingBottom="10dp"
-            android:gravity="center">
+            android:layout_height="0dp"
+            android:layout_weight="2.5" >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Current Location : "
-                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
 
-            <TextView
-                android:id="@+id/textView_RP"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="~~"
-                android:fontFamily="@font/ubuntu_medium" />
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/radiogroup_background">
+
+                    <RadioButton
+                        android:id="@+id/radioButton_5F"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_radio_button"
+                        android:button="@null"
+                        android:text="5F"
+                        android:textColor="@drawable/selector_radio_text" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton_4F"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_radio_button"
+                        android:button="@null"
+                        android:text="4F"
+                        android:textColor="@drawable/selector_radio_text" />
+
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/floor4" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal"
-            android:paddingTop="2dp">
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="30dp"
+                android:paddingBottom="10dp"
+                android:gravity="center">
 
-            <Button
-                android:id="@+id/button_Test"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="Test recognition"
-                android:background="@drawable/button_background"
-                android:elevation="8dp"
-                android:layout_marginRight="10dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Location : "
+                    />
 
-            <Button
-                android:id="@+id/button_BackToMain"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:text="Back to main"
-                android:background="@drawable/button_background"
-                android:elevation="8dp" />
+                <TextView
+                    android:id="@+id/textView_RP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="~~"
+                    android:fontFamily="@font/ubuntu_medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:paddingTop="2dp">
+
+                <Button
+                    android:id="@+id/button_Test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Test recognition"
+                    android:background="@drawable/button_background"
+                    android:elevation="8dp"
+                    android:layout_marginRight="10dp" />
+
+                <Button
+                    android:id="@+id/button_BackToMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Back to main"
+                    android:background="@drawable/button_background"
+                    android:elevation="8dp" />
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

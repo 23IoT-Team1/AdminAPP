@@ -20,14 +20,16 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingLeft="24dp"
-        android:paddingRight="24dp">
+        android:paddingRight="24dp"
+        android:weightSum="4">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:orientation="horizontal"
             android:paddingTop="16dp"
-            android:paddingBottom="16dp">
+            android:paddingBottom="16dp"
+            android:layout_weight="0.6">
 
             <!-- UI는 바꿀거면 나중에 -->
             <!-- android:background="@drawable/spinner_background" -->
@@ -51,40 +53,47 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
-            android:layout_height="360dp"
-            android:src="@drawable/floor4" />
+            android:layout_height="0dp"
+            android:src="@drawable/floor4"
+            android:layout_weight="2.5"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp"
-            android:gravity="center">
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Current Location : "
+                android:orientation="horizontal"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Location : "
+                    />
+
+                <TextView
+                    android:id="@+id/textView_Place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/ubuntu_medium" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_ScanWifi"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:text="Scan Wi-Fi Data"
+                android:background="@drawable/button_background"
+                android:elevation="8dp"
                 />
-
-            <TextView
-                android:id="@+id/textView_Place"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:fontFamily="@font/ubuntu_medium" />
         </LinearLayout>
-
-        <Button
-            android:id="@+id/button_ScanWifi"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:text="Scan Wi-Fi Data"
-            android:background="@drawable/button_background"
-            android:elevation="8dp"
-            />
-
     </LinearLayout>
 </LinearLayout>

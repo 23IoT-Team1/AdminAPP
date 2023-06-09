@@ -17,7 +17,7 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         textView_Place = findViewById(R.id.textView_Place);
-        textView_Count = findViewById(R.id.textView_Count);
+//        textView_Count = findViewById(R.id.textView_Count);
         button_BackToMain = findViewById(R.id.button_BackToMain);
 
         // Get Intent (reference point)
@@ -25,9 +25,9 @@ public class ResultActivity extends AppCompatActivity {
         String rp = intent.getStringExtra("current_place");
         textView_Place.setText(rp);
 
-        // TODO: DB에서 그 rp에 대해 저장된 데이터 수 가져와서 띄우기
-        String num = "5";    // example
-        textView_Count.setText(num);
+//        // TODO: DB에서 그 rp에 대해 저장된 데이터 수 가져와서 띄우기
+//        String num = "5";    // example
+//        textView_Count.setText(num);
         
         // Back to main 버튼
         button_BackToMain.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +41,6 @@ public class ResultActivity extends AppCompatActivity {
 
     // declaration
     private TextView textView_Place;
-    private TextView textView_Count;
+//    private TextView textView_Count;
     private Button button_BackToMain;
 }
