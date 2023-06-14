@@ -17,17 +17,12 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         textView_Place = findViewById(R.id.textView_Place);
-//        textView_Count = findViewById(R.id.textView_Count);
         button_BackToMain = findViewById(R.id.button_BackToMain);
 
         // Get Intent (reference point)
         Intent intent = getIntent();
         String rp = intent.getStringExtra("current_place");
         textView_Place.setText(rp);
-
-//        // TODO: DB에서 그 rp에 대해 저장된 데이터 수 가져와서 띄우기
-//        String num = "5";    // example
-//        textView_Count.setText(num);
         
         // Back to main 버튼
         button_BackToMain.setOnClickListener(new View.OnClickListener() {

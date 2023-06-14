@@ -15,7 +15,6 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         button_CollectData = findViewById(R.id.button_CollectData);
-        button_Test = findViewById(R.id.button_Test);
 
         button_CollectData.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,16 +24,8 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        button_Test.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, TestActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     // declaration
     private Button button_CollectData;
-    private Button button_Test;
 }

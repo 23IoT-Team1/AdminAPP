@@ -22,20 +22,14 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class SenderToServer {
-
         // Convert the measured values to JSON
-
-
 
         private static node request_body;
         public SenderToServer(String floor, String place, ArrayList arrayList){
                 
                 // rp랑 place 저장
                 String[] str = place.split(" ~ ");      // 0은 place, 1은 rp
-                
-                //빈 arraylist에 집어넣어줌
-                //constructor에서 받아온 arraylist는
-                // scanWifiActivity에서 저장한 5개의 AP 정보를 WifiDTO 형식으로 담은 Arraylist이다
+
                 request_body = new node(floor, str[1], str[0], arrayList);
 
         }
@@ -44,12 +38,8 @@ public class SenderToServer {
                 Gson gson = new Gson();
                 String json = gson.toJson(request_body);
 
-                Log.d(TAG, json);
-
-
                 OkHttpClient client = new OkHttpClient();
 
-                Log.e("테스트","testsets");
 
                 Request request = new Request.Builder()
                         .url("http://172.16.63.238:8080/rp")
